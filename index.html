@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ИК пульт для ТВ и приставок OGT — Политика конфиденциальности</title>
+<style>
+  :root { --accent: #2563eb; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px; line-height: 1.6;
+    color: #1a1a1a; background: #fafafa;
+  }
+  .container { max-width: 760px; margin: 0 auto; padding: 48px 24px 80px; }
+  h1 { font-size: 1.6rem; font-weight: 700; margin-bottom: 4px; }
+  .updated { color: #666; font-size: 0.9rem; margin-bottom: 40px; }
+  .lang-tabs { display: flex; gap: 8px; margin-bottom: 32px; }
+  .lang-tabs button {
+    padding: 6px 16px; border: 1.5px solid var(--accent);
+    background: transparent; color: var(--accent); border-radius: 20px;
+    cursor: pointer; font-size: 0.9rem; font-weight: 500;
+    transition: background 0.15s, color 0.15s;
+  }
+  .lang-tabs button.active { background: var(--accent); color: #fff; }
+  .lang { display: none; }
+  .lang.active { display: block; }
+  h2 { font-size: 1.1rem; font-weight: 600; margin: 28px 0 8px; color: #111; }
+  p { margin-bottom: 12px; color: #333; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .contact { margin-top: 40px; padding: 20px; background: #eff6ff;
+    border-radius: 8px; border-left: 3px solid var(--accent); }
+  .contact p { margin: 0; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #111; color: #e5e5e5; }
+    h2 { color: #f0f0f0; }
+    p { color: #ccc; }
+    .contact { background: #1e2d4a; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>ИК пульт для ТВ и приставок OGT</h1>
+  <p class="updated">Privacy Policy · Политика конфиденциальности · Updated 2026-07-04</p>
+
+  <div class="lang-tabs">
+    <button class="active" onclick="setLang('ru')">Русский</button>
+    <button onclick="setLang('en')">English</button>
+  </div>
+
+  <!-- RUSSIAN -->
+  <div class="lang active" id="lang-ru">
+    <p><strong>ИК пульт для ТВ и приставок OGT</strong> — утилита для управления устройствами через инфракрасный порт. Основные функции и встроенные профили работают локально, без доступа к сети.</p>
+
+    <h2>Локальные данные</h2>
+    <p>Сохранённые пульты, профили, настройки, журналы и импортированные LIRC-данные хранятся в закрытом хранилище приложения. Экспорт происходит только когда пользователь явно выбирает место назначения через системный выбор файлов Android. Содержимое ИК-сигналов и профили не загружаются в облако.</p>
+
+    <h2>Сетевые функции</h2>
+    <p>Приложение может подключаться к сервисам Firebase (Remote Config, опциональная диагностика, проверка Pro-кодов) и к опциональному серверу ИК-базы данных. Если эти сервисы недоступны, встроенные и сохранённые пульты продолжают работать.</p>
+
+    <h2>Управление ТВ по Wi-Fi</h2>
+    <p>Приложение может управлять смарт-телевизорами по локальной сети Wi-Fi: Android TV / Google TV, Samsung (Tizen) и LG (webOS). Оно находит телевизоры в локальной сети (mDNS и SSDP) и обменивается данными <strong>напрямую с телевизором</strong>. Информация о ваших телевизорах не отправляется нам или третьим лицам. Учётные данные сопряжения (клиентский сертификат Android TV, токен Samsung, client-key LG), имена телевизоров и локальные IP хранятся только в закрытом хранилище приложения и исключены из облачного бэкапа и переноса. Включить телевизор по сети нельзя — он должен быть уже включён.</p>
+    <p>Опциональный голосовой ввод текста использует встроенное распознавание речи устройства. Аудио записывается и обрабатывается системным сервисом распознавания речи (например, Google), а не приложением; приложение получает только распознанный текст и передаёт его на телевизор. Приложение не записывает, не хранит и не загружает аудио и само не запрашивает разрешение на микрофон.</p>
+
+    <h2>Облачная диагностика (опционально)</h2>
+    <p>До принятия этой Политики на экране приветствия диагностика Firebase <strong>не собирается</strong> — приложение не инициализирует Firebase. После принятия сбор аналитики и диагностики сбоев <strong>включён</strong>; пользователь может отключить его в Настройках → «Облачная диагностика». В версии RuStore встроенный рекламный SDK инициализируется отдельно при запуске приложения (см. «Реклама»); тумблер «Облачная диагностика» управляет только Firebase.</p>
+    <p>При включении приложение может отправлять: анонимизированные события использования (бренд, модель, категория, кнопка и признак наличия ИК-передатчика — без персональных данных) и отчёты об ошибках (версия приложения, диагностика ОС/устройства).</p>
+    <p>На устройствах без Google Mobile Services (Huawei, кастомные прошивки) Firebase Analytics деградирует незаметно — события не отправляются. Crashlytics работает нормально.</p>
+    <p>Google обрабатывает данные согласно <a href="https://policies.google.com/privacy?hl=ru" rel="noopener">Политике конфиденциальности Google</a> и <a href="https://firebase.google.com/terms" rel="noopener">условиям Firebase</a>.</p>
+
+    <h2>Разрешения</h2>
+    <p><code>TRANSMIT_IR</code> — отправка ИК-команд. <code>VIBRATE</code> — тактильная обратная связь. <code>INTERNET</code> / <code>ACCESS_NETWORK_STATE</code> — опциональные сетевые функции. Приложение не запрашивает доступ к контактам, местоположению, камере, микрофону или хранилищу файлов.</p>
+
+    <h2>Реклама</h2>
+    <p><strong>Версия RuStore:</strong> баннерная, межстраничная и вознаграждаемая видеореклама от Яндекс Мобильной Рекламы (ООО «Яндекс»). Яндекс обрабатывает рекламу согласно <a href="https://yandex.ru/legal/confidential/" rel="noopener">Политике конфиденциальности Яндекса</a>.</p>
+    <p>SDK Яндекс Мобильной Рекламы включает Яндекс AppMetrica, которая инициализируется автоматически при запуске приложения (требование Яндекса, не зависит от тумблера «Облачная диагностика»). AppMetrica собирает технические данные о показе рекламы и устройстве согласно Политике конфиденциальности Яндекса. Согласие на рекламу передаётся SDK только после принятия этой Политики; рекламному SDK не передаются ваши пульты, ИК-коды или персональные данные.</p>
+    <p><strong>Версия Google Play:</strong> реклама от Google AdMob. Обрабатывается согласно <a href="https://policies.google.com/privacy?hl=ru" rel="noopener">Политике конфиденциальности Google</a>.</p>
+    <p>Вознаграждаемая реклама открывает доступ к кастомизации внешнего вида. Реклама не показывается пользователям без необходимых разрешений на устройстве.</p>
+
+  </div>
+
+  <!-- ENGLISH -->
+  <div class="lang" id="lang-en">
+    <p><strong>ИК пульт для ТВ и приставок OGT</strong> is an infrared remote-control utility. Core functions and bundled profiles work locally without any network access.</p>
+
+    <h2>Local Data</h2>
+    <p>Saved remotes, profiles, settings, logs and imported LIRC data are stored in app-private storage. Exports occur only when the user explicitly selects a destination via Android's document picker. IR signal contents and profile dumps are not uploaded.</p>
+
+    <h2>Network Features</h2>
+    <p>The app may connect to Firebase services (Remote Config, optional diagnostics, Pro-code validation) and an optional owner-configured IR database server. If unavailable, bundled and saved remotes continue to work.</p>
+
+    <h2>Wi-Fi TV Control</h2>
+    <p>The app can control smart TVs over your local Wi-Fi network: Android TV / Google TV, Samsung (Tizen) and LG (webOS). It discovers TVs on the local network (mDNS and SSDP) and communicates <strong>directly with the TV</strong>. No information about your TVs is sent to us or any third party. Pairing credentials (the Android TV client certificate, the Samsung access token, the LG client-key), TV names and local IP addresses are stored only in app-private storage and are excluded from cloud backup and device transfer. A TV cannot be powered on over the network — it must already be on.</p>
+    <p>Optional voice input for on-screen text uses your device's built-in speech recognition. Audio is captured and processed by your device's system speech-recognition service (for example Google), not by this app; the app receives only the recognized text and forwards it to the TV. The app does not record, store or upload audio, and does not request the microphone permission itself.</p>
+
+    <h2>Optional Cloud Diagnostics</h2>
+    <p>No Firebase diagnostics are collected before you accept this policy on the welcome screen — the app does not initialise Firebase until then. After you accept, analytics and crash diagnostics are <strong>enabled</strong>; you can turn them off in Settings → "Cloud diagnostics". In the RuStore build the bundled advertising SDK initialises separately at app launch (see "Advertising"); the "Cloud diagnostics" switch controls only Firebase.</p>
+    <p>When enabled the app may send: anonymised usage events (brand, model, category, button and an IR-emitter capability flag — no personal data) and crash reports (app version, OS/device diagnostics).</p>
+    <p>On devices without Google Mobile Services (Huawei, custom ROMs), Firebase Analytics degrades silently — no events are sent. Crashlytics works normally.</p>
+    <p>Google processes data per the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a> and <a href="https://firebase.google.com/terms" rel="noopener">Firebase terms</a>.</p>
+
+    <h2>Permissions</h2>
+    <p><code>TRANSMIT_IR</code> — send infrared commands. <code>VIBRATE</code> — haptic feedback. <code>INTERNET</code> / <code>ACCESS_NETWORK_STATE</code> — optional network features. The app does not request contacts, location, camera, microphone or storage permissions.</p>
+
+    <h2>Advertising</h2>
+    <p><strong>RuStore build:</strong> banner, interstitial and rewarded video ads by Yandex Mobile Ads (Yandex LLC), per the <a href="https://yandex.ru/legal/confidential/" rel="noopener">Yandex Privacy Policy</a>.</p>
+    <p>The Yandex Mobile Ads SDK bundles Yandex AppMetrica, which initialises automatically at app launch (required by Yandex, independent of the "Cloud diagnostics" switch). AppMetrica collects ad-delivery and device/SDK technical data per the Yandex Privacy Policy. Advertising consent is passed to the SDK only after you accept this policy; your saved remotes, IR codes and personal data are never passed to the ad SDK.</p>
+    <p><strong>Google Play build:</strong> ads by Google AdMob, per the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.</p>
+    <p>Rewarded ads gate optional appearance features. Ads are not shown to users who have not granted necessary advertising permissions on their device.</p>
+
+  </div>
+</div>
+
+<script>
+function setLang(lang) {
+  document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.lang-tabs button').forEach(btn => btn.classList.remove('active'));
+  document.getElementById('lang-' + lang).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
+</body>
+</html>
